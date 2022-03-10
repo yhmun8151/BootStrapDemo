@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/css/app.css">
   <title>My first Web</title>
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-lg sticky-top">
+  <!-- 홈페이지 상단의 탭 : MyBs5아이콘, {Home,Intro,Services...} or 햄버거버튼 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-lg sticky-top"> 
+    <!-- navbar, lg에서만 expand(확장), 패딩 y축(위/아래), 그림자모드, 스티키모드 -->
     <div class="container">
       <a href="index.html" class="navbar-brand align-middle">
+        <!-- 가운데 라인맞춤 baseline으로 해도 비슷 -->
         <h3 class="m-0">
+          <!-- margin 0 -->
           <img src="assets/images/bootstrap-logo.png" alt="Logo" height="36px">
-          My BSS web
+          My BS5 web
         </h3>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
+        <!-- 햄버거버튼, collapse 컨트롤러와 링크, id는 navbarSupportedContent (collapse : 더보기) -->
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!-- margin start : auto, margin bottom : 2, 큰 화면인경우 margin bottom : 0 -->
           <li class="nav-item">
             <a href="#top" class="nav-link">
               Home
@@ -65,8 +81,73 @@
     </div>
   </nav>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <section id="top">
+    <!-- top 설명은 app.css 참조 -->
+    <div class="section-content overlay d-flex justify-content-center align-items-center">
+      <!-- section-content, overlay : css / d-flex : 정렬방식, justify-content-center : 가로는 왼쪽부터, align-items-center : 세로는 가운데부터 레이아웃 배치 -->
+      <div class="container-xxl">
+        <!-- Welcome~과, EasyContact의 레이아웃이 xxl까지 100%로 보이다가 그것보다 더 커지면 좌우 여백이생김 -->
+        <div class="row align-items-center">
+          <div class="col-md-9 welcome">
+            <!-- 12중 9만큼의 영역을 사용, welcome은 app.css -->
+            <h1 class="welcome-title fw-light">Welcome to <span class="text-warning fw-bold">my first website</span>.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quae.</h1>
+              <!-- welcome-title 나중에 css에 생기겠지..? -->
+              <div class="divider"></div>
+              <!-- app.css -->
+              <div class="row welcome-desc">
+                <!-- welcome-desc 나중에 css에 생기겠지 -->
+              <p class="col-sm-10 col-md-12 lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                error sint nihil ex ab nisi nulla totam omnis beatae provident?</p>
+                <!-- lead : 문단을 강조하는 클래스 글자크기와 줄간격이 커진다. -->
+              <p class="col-sm-2 col-md-12">
+                <a href="#" class="btn btn-primary">Read more</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 d-none d-md-block letsgo">
+            <!-- 나머지 12중의 3만큼의 영역 사용, d-none:히든, d-md-block은 md부터 보임  -->
+            <div class="card card-body letsgo-card">
+              <!-- card class, card-body 바로 지정 -->
+              <div class="letsgo my-3">
+                <h4 class="letsgo-title card-title text-dark mb-3">Easy contact!</h4>
+                <!-- card title, margin bottom 3 -->
+                <p class="card-text text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+                  tempora.</p>
+                  <!-- card text -->
+              </div>
+              <div class="letsgo-card-form">
+                <form>
+                  <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Your name">
+                  </div>
+                  <div class="mb-3">
+                    <input type="tel" class="form-control" placeholder="Your phone">
+                  </div>
+                  <div class="form-check mb-3">
+                    <input type="text" class="form-check-input" id="flexCheckDefault">
+                    <label for="flexCheckDefault" class="form-check-label text-secondary">
+                      I agree to provide privacy.
+                    </label>
+                  </div>
+                  <p class="mb-3">
+                    <button class="btn btn-primary w-100" type="button">Submit</button>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="assets/js/app.js"></script>
 </body>
+
 </html>
