@@ -112,12 +112,11 @@
               <div class="letsgo my-3">
                 <h4 class="letsgo-title card-title text-dark mb-3">Easy contact!</h4>
                 <!-- card title, margin bottom 3 -->
-                <p class="card-text text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
-                  tempora.</p>
+                <p class="card-text text-secondary"> card-text text-secondary line : 115 Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, tempora.</p>
                   <!-- card text -->
               </div>
               <div class="letsgo-card-form">
-                <form>
+                <form> <!-- name, phone 적는 폼 -->
                   <div class="mb-3">
                     <input type="text" class="form-control" placeholder="Your name">
                   </div>
@@ -141,9 +140,179 @@
       </div>
     </div>
   </section>
+
+  <!-- section#intro>section-content>.container.intro>.row.align-items-center -->
+  <section id="intro">
+    <div class="section-content"> <!-- css에 있음 (padding 4rem)-->
+      <div class="container intro"> <!--intro는 css안에 있음 스타일 부모클래스 -->
+        <!-- 레이아웃은 반반(col-6)으로 그림과 설명으로 나누고, 그림은 한 장씩 보여지게(col-6) 구성 -->
+        <div class="row align-items-center"> <!-- 레이아웃 가운데정렬 -->
+          <div class="col-md-6 intro-first"> <!--그림보여지는 부분, col-6사용-->
+            <div class="row px-md-3"> <!--pading, margin 3-->
+              <div class="col-6"> <!--그림쪽은 다시 반반(col-6)으로 구성한다.-->
+                <div class="card card-body my-3 position-relative rounded-3 shadow-lg intro-first-card">
+                  <!-- 이미지 경로는 intro-first-card(css) 참조 -->
+                  <div class="overlay d-flex justify-content-center align-items-center position-absolute h-100 w-100 shadow-lg">
+                    <h3 class="fw-light">
+                      <a href="#" class="link-light text-decoration-none">Link 1</a>
+                      <!-- 색상, 데코 없게.. -->
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <!-- 두 번째 사진 레이아웃 -->
+              <div class="col-6">
+                <div class="card card-body my-3 position-relative rounded-3 shadow-lg intro-first-card">
+                  <div class="overlay d-flex justify-content-center align-items-center position-absolute h-100 w-100 shadow-lg">
+                    <h3 class="fw-light">
+                      <a href="#" class="link-light text-decoration-none">Link 2</a>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <!-- 세 번째 사진 레이아웃 -->
+              <div class="col-6">
+                <div class="card card-body my-3 position-relative rounded-3 shadow-lg intro-first-card">
+                  <div class="overlay d-flex justify-content-center align-items-center position-absolute h-100 w-100 shadow-lg">
+                    <h3 class="fw-light">
+                      <a href="#" class="link-light text-decoration-none">Link 3</a>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <!-- 네 번째 사진 레이아웃 -->
+              <div class="col-6">
+                <div class="card card-body my-3 position-relative rounded-3 shadow-lg intro-first-card">
+                  <div class="overlay d-flex justify-content-center align-items-center position-absolute h-100 w-100 shadow-lg">
+                    <h3 class="fw-light">
+                      <a href="#" class="link-light text-decoration-none">Link 4</a>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 우측 설명 레이아웃 -->
+          <div class="col-md-6 intro-second">
+            <h5 class="fw-light">Greetings!</h5>
+            <h1 class="mb-4">Introduce our website.</h1>
+            <div class="intro-text">
+              <p class="lead">Lorem ipsum dolor sadlkf sadlkfjnbadsf lksdmaflasd fljdsn asdl;fkm asdlfjn salksdmf 20ro eksdj qksksk  djfuqrh glaemfdjeh zhqnfth congratulation!</p>
+              <p class="lead">Lorem ipsum dolor sadlkf sadlkfjnbadsf lksdmaflasd fljdsn asdl;fkm asdlfjn salksdmf</p>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- 갤러리같은 디자인을 위해 slick을 사용한다. (jquery 필수) -->
+  <section id="services">
+    <div class="section-content"> <!--css 참조-->
+      <div class="container services"> <!--services는 css에 부모클래스 같이 활용-->
+        <div class="services-header text-center mb-5">
+          <h1 class="display-5">Our amazing services</h1>
+          <div class="divider"></div> <!--services 밑 divider는 따로.. css에 있음.-->
+          <p class="lead text-secondary">
+            lorem impum dolor orem ipsum dolor sadlkf sadlkfjnbadsf lksdmaflasd fljdsn asdl;fkm asdlf
+          </p>
+        </div>
+        <!-- slick slide 활용 -->
+        <div id="slick-slide" class="services-body">
+          <div class="services-col mx-2 my-3"> <!--services-col은 css 참조-->
+            <div class="card">
+              <a href="#">
+                <img src="./assets/images/port1.jpg" alt="" class="card-img-top">
+              </a>
+              <div class="card-body">
+                <h4 class="card-title">Slide title</h4>
+                <p class="card-text fw-light mb-4">
+                  orem ipsum dolor sadlkf sadlkfjnbadsf lksdmaflasd fljdsn asdl;fkm asdlf!
+                </p>
+                <a href="#" class="btn btn-primary">View more...</a>
+              </div>
+            </div>
+          </div>
+          <div class="services-col mx-2 my-3">
+            <div class="card">
+              <a href="#">
+                <img src="./assets/images/port2.jpg" alt="" class="card-img-top">
+              </a>
+              <div class="card-body">
+                <h4 class="card-title">Slide title</h4>
+                <p class="card-text fw-light mb-4">
+                  orem ipsum dolor sadlkf sadlkfjnbadsf lksdmaflasd fljdsn asdl;fkm asdlf!
+                </p>
+                <a href="#" class="btn btn-primary">View more...</a>
+              </div>
+            </div>
+          </div>
+          <div class="services-col mx-2 my-3">
+            <div class="card">
+              <a href="#">
+                <img src="./assets/images/port3.jpg" alt="" class="card-img-top">
+              </a>
+              <div class="card-body">
+                <h4 class="card-title">Slide title</h4>
+                <p class="card-text fw-light mb-4">
+                  orem ipsum dolor sadlkf sadlkfjnbadsf lksdmaflasd fljdsn asdl;fkm asdlf!
+                </p>
+                <a href="#" class="btn btn-primary">View more...</a>
+              </div>
+            </div>
+          </div>
+          <div class="services-col mx-2 my-3">
+            <div class="card">
+              <a href="#">
+                <img src="./assets/images/port4.jpg" alt="" class="card-img-top">
+              </a>
+              <div class="card-body">
+                <h4 class="card-title">Slide title</h4>
+                <p class="card-text fw-light mb-4">
+                  orem ipsum dolor sadlkf sadlkfjnbadsf lksdmaflasd fljdsn asdl;fkm asdlf!
+                </p>
+                <a href="#" class="btn btn-primary">View more...</a>
+              </div>
+            </div>
+          </div>
+          <div class="services-col mx-2 my-3">
+            <div class="card">
+              <a href="#">
+                <img src="./assets/images/port5.jpg" alt="" class="card-img-top">
+              </a>
+              <div class="card-body">
+                <h4 class="card-title">Slide title</h4>
+                <p class="card-text fw-light mb-4">
+                  orem ipsum dolor sadlkf sadlkfjnbadsf lksdmaflasd fljdsn asdl;fkm asdlf!
+                </p>
+                <a href="#" class="btn btn-primary">View more...</a>
+              </div>
+            </div>
+          </div>
+          <div class="services-col mx-2 my-3">
+            <div class="card">
+              <a href="#">
+                <img src="./assets/images/port6.jpg" alt="" class="card-img-top">
+              </a>
+              <div class="card-body">
+                <h4 class="card-title">Slide title</h4>
+                <p class="card-text fw-light mb-4">
+                  orem ipsum dolor sadlkf sadlkfjnbadsf lksdmaflasd fljdsn asdl;fkm asdlf!
+                </p>
+                <a href="#" class="btn btn-primary">View more...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
     integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
