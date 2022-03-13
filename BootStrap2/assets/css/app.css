@@ -38,4 +38,30 @@ body, h1, h2, h3, h4, h5, h6, p, a, ul, li, button, input, textarea, select, spa
   padding-left: 0.75rem;
   line-height: 1.75;
 }
+
+#frontCarousel {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 1rem;
+}
+
+#frontCarousel .carousel-inner {
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+#frontCarousel .carousel-inner .carousel-item {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  height: 70vh;
+}
+
+#frontCarousel .carousel-inner .carousel-item .carousel-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+}
 /*# sourceMappingURL=app.css.map */
