@@ -8,13 +8,21 @@ $brand-purple : #93c;
 $brand-blue : #0d47a1;
 $rgba-white-strong : rgba(255, 255, 255, 0.7);
 $brand-red : #c00;
+$brand-beige: #807060;
+$rgba-black-light: rgba(0, 0, 0, 0.35);
 
-@mixin background($height) {
+@mixin background($height: 60vh) {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
   height: $height;
+}
+
+@mixin overlay($bgColor: $rgba-black-light) {
+  height: 100%;
+  width: 100%;
+  background-color: $bgColor;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, a, ul, li, button, input, textarea, select, span, small {
@@ -214,5 +222,55 @@ body, h1, h2, h3, h4, h5, h6, p, a, ul, li, button, input, textarea, select, spa
       background-color: #fff;
       box-shadow: $brand-shadow;
     }
+  }
+}
+
+#footer {
+  background-color: $brand-beige;
+  color: #fff;
+
+  .nav-footer {
+    a {
+      font-size: 1.1rem;
+    }
+  }
+  
+  .footer-informations {
+    p {
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+
+    .social {
+      margin-top: 0.75rem;
+      display: inline-block;
+
+      img {
+        width: 2.25rem;
+        border-radius: 0.5rem;
+      }
+    }
+
+    .copyright {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 300;
+      margin-top: 1rem;
+    }
+  }
+}
+
+/* Page */
+#topBanner {
+  @include background;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: $brand-shadow;
+
+  .overlay {
+    @include overlay;
+    color: #fff;
+    border-radius: 0.75rem  ;
   }
 }

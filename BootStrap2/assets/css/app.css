@@ -221,4 +221,57 @@ body, h1, h2, h3, h4, h5, h6, p, a, ul, li, button, input, textarea, select, spa
   -webkit-box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
+
+#footer {
+  background-color: #807060;
+  color: #fff;
+}
+
+#footer .nav-footer a {
+  font-size: 1.1rem;
+}
+
+#footer .footer-informations p {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+#footer .footer-informations .social {
+  margin-top: 0.75rem;
+  display: inline-block;
+}
+
+#footer .footer-informations .social img {
+  width: 2.25rem;
+  border-radius: 0.5rem;
+}
+
+#footer .footer-informations .copyright {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-top: 1rem;
+}
+
+/* Page */
+#topBanner {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  height: 60vh;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.75rem;
+  -webkit-box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+#topBanner .overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  border-radius: 0.75rem;
+}
 /*# sourceMappingURL=app.css.map */
