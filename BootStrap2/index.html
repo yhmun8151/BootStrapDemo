@@ -12,12 +12,56 @@
 <body>
   <!-- header : Company 로고가 보여지는 레이아웃과 navbar가 보여지는 레이아웃으로 구성, navbar는 모바일 최적화  -->
   <header id="header" class="wrapper">
+    
+    <!-- Modal -->
+  <div class="modal fade" id="ourModal" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="ourModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ourModalLabel">Contact us!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="mb-3">
+              <label for="yourName" class="form-label">Your name</label>
+              <input type="text" id="yourName" placeholder="Your name" class="form-control">
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="yourPhone" class="form-label">Your phone</label>
+                <input type="text" id="yourPhone" placeholder="010-111-1111" class="form-control">  
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="yourEmail" class="form-label">Email address</label>
+                <input type="text" id="yourEmail" placeholder="example@email.com" class="form-control">  
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="yourTextarea" class="form-label">Write what you want</label>
+              <textarea name="" id="yourTextarea" cols="30" rows="3" class="form-control" placeholder="Write what you want."></textarea>
+            </div>
+            <div class="form-check mb-3">
+              <input type="checkbox" class="form-check-input" id="yourFormCheck">
+              <label for="yourFormCheck" class="form-check-label">
+                I agree to provide privacy.
+              </label>
+            </div>
+            <button class="btn btn-secondary" type="submit">Send!</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <!-- section : Company 로고가 보여지는 레이아웃 d-none d-md-block으로 모바일에선 안보이게 설정 -->
     <section id="navTop" class="nav-top py-2 d-none d-md-block">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-3 text-start lead fast-counsel">
-            <a href="#" class="btn btn-outline-dark">Contact</a>
+            <a href="#" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#ourModal" role="button">Contact</a>
           </div>
           <div class="col-4 logo">
             <a href="index.html" class="navbar-brand d-flex">

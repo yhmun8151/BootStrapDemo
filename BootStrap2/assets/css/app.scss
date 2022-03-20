@@ -274,3 +274,47 @@ body, h1, h2, h3, h4, h5, h6, p, a, ul, li, button, input, textarea, select, spa
     border-radius: 0.75rem  ;
   }
 }
+
+#blogContent {
+  .grid-item {
+    .card {
+      margin-bottom: 1rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: $brand-shadow;
+        transform: translateY(-8px);
+      }
+
+      .post-featured {
+        @include background(12rem);
+      }
+
+      .post-text {
+        .img-avatar {
+          width: 18px;
+          border-radius: 50%;
+        }
+      }
+
+      a {
+        color: $brand-blue;
+        transition: 0.3s ease;
+
+        &:hover {
+          color: lighten($brand-blue, 20%);
+        }
+      }
+    }
+  }
+}
+
+/* Post */
+#postContent {
+  .post-meta {
+    .img-avatar {
+      width: 24px;
+      border-radius: 50%;
+    }
+  }
+}
