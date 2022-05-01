@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/screen/home_screen.dart';
 import 'package:netflix/widget/bottom_bar.dart';
 
 void main() {
@@ -10,7 +11,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  TabController controller;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,19 +21,19 @@ class _MyAppState extends State<MyApp> {
         accentColor: Colors.white,
       ),
       home: DefaultTabController(
-        length: 4, 
+        length: 4,
         child: Scaffold(
           body: TabBarView(
             physics: NeverScrollableScrollPhysics(),
             children: [
-              Container(),
+              HomeScreen(),
               Container(),
               Container(),
               Container(),
             ],
           ),
           bottomNavigationBar: Bottom(),
-      ),
+        ),
       ),
     );
   }
