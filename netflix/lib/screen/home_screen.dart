@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:netflix/model/movie.dart';
 import 'package:netflix/widget/box_slider.dart';
 import 'package:netflix/widget/carousel_slider.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../widget/circle_slider.dart';
 
@@ -14,44 +15,27 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<Movie> movies = [
-    Movie.fromMap({
-      'title': '사랑의 불시착',
-      'keyword': '사랑/로맨스/판타지',
-      'poster': 'test_movie_1.png',
-      'like': false,
-    }),
-    Movie.fromMap({
-      'title': '사랑의 불시착',
-      'keyword': '사랑/로맨스/판타지',
-      'poster': 'test_movie_1.png',
-      'like': false,
-    }),
-    Movie.fromMap({
-      'title': '사랑의 불시착',
-      'keyword': '사랑/로맨스/판타지',
-      'poster': 'test_movie_1.png',
-      'like': false,
-    }),
-    Movie.fromMap({
-      'title': '사랑의 불시착',
-      'keyword': '사랑/로맨스/판타지',
-      'poster': 'test_movie_1.png',
-      'like': false,
-    }),
-    Movie.fromMap({
-      'title': '사랑의 불시착',
-      'keyword': '사랑/로맨스/판타지',
-      'poster': 'test_movie_1.png',
-      'like': false,
-    }),
-    Movie.fromMap({
-      'title': '사랑의 불시착',
-      'keyword': '사랑/로맨스/판타지',
-      'poster': 'test_movie_1.png',
-      'like': false,
-    }),
-  ];
+  FirebaseFirestore firestore = FirebaseFirestore.instance;
+  late Stream<QuerySnapshot> streamData;
+  late List<Movie> movies = [];
+  @override
+  void initState() {
+    super.initState();
+    streamData = firestore.collection('movie').snapshots();
+    firestore.collection('movie').get().then((event) => {
+          for (var doc in event.docs)
+            {
+              movies.add(Movie.fromMap({
+                'title': doc["title"],
+                'keyword': doc["keyword"],
+                'poster': doc["poster"],
+                'like': doc["like"],
+              })),
+            },
+          setState(() {}),
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

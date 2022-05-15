@@ -6,21 +6,22 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
 void main() {
+  // initFB();
   runApp(MyApp());
-  initFB();
 }
 
-Future<void> initFB() async {
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-}
+// Future<void> initFB() async {
+//   await Firebase.initializeApp(
+//     options: DefaultFirebaseOptions.currentPlatform,
+//   );
+// }
 
 class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
+  final Future<FirebaseApp> firebaseInstance = Firebase.initializeApp();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
